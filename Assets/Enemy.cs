@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour
 {
+    public int health = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +21,9 @@ public class Enemy : MonoBehaviour
         if(collision.gameObject.tag == "Destroyer"){
             Destroy(gameObject);
         }
+    }
+    
+    public void Damage(int damage){
+        health -= damage;
     }
 }
