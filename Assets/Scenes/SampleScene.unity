@@ -442,7 +442,7 @@ GameObject:
   - component: {fileID: 366871165}
   - component: {fileID: 366871171}
   - component: {fileID: 366871170}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Enemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -751,7 +751,13 @@ MonoBehaviour:
   isAttack: 0
   damage: 4
   wait: 3
-  enemy: {fileID: 0}
+  enemy: {fileID: 366871170}
+  transform: {fileID: 0}
+  enemyLayer:
+    serializedVersion: 2
+    m_Bits: 8
+  startPosition: {fileID: 2070753901}
+  arrow: {fileID: 1167865341789108855, guid: 11bad0ab7cd8c41afb9ddda50c7afd50, type: 3}
 --- !u!212 &421911467
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -813,7 +819,7 @@ Transform:
   m_GameObject: {fileID: 421911463}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.01, y: -1.42, z: 0}
+  m_LocalPosition: {x: -6.25, y: -0.53, z: 0}
   m_LocalScale: {x: 0.83206, y: 0.83206, z: 0.83206}
   m_ConstrainProportionsScale: 0
   m_Children:
