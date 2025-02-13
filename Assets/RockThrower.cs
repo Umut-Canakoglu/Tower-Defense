@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Archer : MonoBehaviour
+public class RockThrower : MonoBehaviour
 {
     public bool isAttack = false;
     public float wait;
@@ -13,7 +13,7 @@ public class Archer : MonoBehaviour
     private GameObject target;
     public Transform startPosition;
     private GameObject targetBefore;
-    public GameObject arrow;
+    public GameObject rock;
     
     
 
@@ -30,7 +30,7 @@ public class Archer : MonoBehaviour
             float Angle = Mathf.Atan2(Look.y, Look.x) * Mathf.Rad2Deg;
             transform.Rotate(0,0,Angle);
         }
-        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(transform.position, 4f, enemyLayer);
+        Collider2D[] collider2Ds = Physics2D.OverlapCircleAll(transform.position, 6f, enemyLayer);
         if (collider2Ds.Length > 0)
         {
             isAttack = true;
@@ -60,7 +60,7 @@ public class Archer : MonoBehaviour
 
     IEnumerator Damage(){
         Quaternion change = Quaternion.Euler(0, 0, -10f);
-        Instantiate(arrow, startPosition.position, transform.rotation*change);
+        Instantiate(rock, startPosition.position, transform.rotation*change);
         isCoroutine = false;
         yield return new WaitForSecondsRealtime(wait);
         isCoroutine = true;

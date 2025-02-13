@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Arrow : MonoBehaviour
+public class Rock : MonoBehaviour
 {
     public Rigidbody2D rb;
     public int damage;
