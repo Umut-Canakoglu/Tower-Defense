@@ -30,7 +30,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -2.3, y: -2.54, z: 0}
-  m_LocalScale: {x: 0.83206, y: 0.83206, z: 0.83206}
+  m_LocalScale: {x: 0.773225, y: 0.773225, z: 0.773225}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 4081613611829980800}
@@ -163,8 +163,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isAttack: 0
-  damage: 10
-  wait: 5
+  wait: 3.5
   enemy: {fileID: 0}
   transform: {fileID: 0}
   enemyLayer:
